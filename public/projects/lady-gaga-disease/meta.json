@@ -1,0 +1,15 @@
+{
+  "title": "Lady Gaga: Disease",
+  "overview": "Lady Gaga",
+  "section": "designs",
+  "date": "OCTOBER 2024 ",
+  "description": "MARKET RESEARCH AND STYLING ASSISTANT FOR DISEASE BY LADY GAGA AS PART OF THE HARDSTYLE TEAM, STYLING BY HARDSTYLE ",
+  "tags": ["performance", "art", "illustration", "music"],
+  "image": "/projects/lady-gaga-disease/videos/video.mp4",
+  "video": true,
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "video", "src": "/projects/lady-gaga-disease/videos/video.mp4", "template": 1},
+    {"type": "image", "src": "/projects/lady-gaga-disease/images/disease_cover.jpg", "template": 1}
+  ]
+}

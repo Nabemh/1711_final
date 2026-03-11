@@ -1,0 +1,16 @@
+{
+  "title": "OTE Resurrect",
+  "overview": "Resurrect",
+  "section": "styling",
+  "date": "APRIL 2024",
+  "description": "ODUNSI THE ENGINE  RESSURECT MUSIC VIDEO STYLED BY FABOYO JOHN",
+  "tags": ["textile", "motion", "kinetic", "design"],
+  "image": "/projects/ote-resurrect/thumbs/work-7.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/ote-resurrect/images/1_OTE.webp", "template": 1},
+    {"type": "image", "src": "/projects/ote-resurrect/images/2_OTE.webp", "template": 1},
+    {"type": "image", "src": "/projects/ote-resurrect/images/3_OTE.webp", "template": 1},
+    {"type": "image", "src": "/projects/ote-resurrect/images/4_OTE.webp", "template": 1}
+  ]
+}

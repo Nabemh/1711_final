@@ -1,0 +1,17 @@
+{
+  "title": "SOMA",
+  "overview": "Soma",
+  "section": "styling",
+  "date": "NOVEMBER 2024",
+  "description": "PORTRAITS OF SOMADINA STYLED BY FABOYO JOHN",
+  "tags": ["textile", "motion", "kinetic", "fashion"],
+  "image": "/projects/soma/thumbs/work-6.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/soma/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/soma/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/soma/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/soma/images/pic_4.webp", "template": 1},
+    {"type": "image", "src": "/projects/soma/images/pic_5.webp", "template": 1}
+  ]
+}

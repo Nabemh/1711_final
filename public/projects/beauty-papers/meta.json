@@ -1,0 +1,21 @@
+{
+  "title": "BEAUTY PAPERS MAGAZINE. FACTORY OF DREAMS ISSUE 12",
+  "overview": "Beauty Papers",
+  "section": "designs",
+  "date": "NOVEMBER 2024",
+  "description": "Market research and styling assistant for the Beauty Papers, factory of dreams issue 2025, as part of the Hardstyle team.  Photography by Gabriel Moses Styling by A Hardstyle November 2024",
+  "tags": ["beauty", "editorial", "fashion", "event"],
+  "image": "/projects/beauty-papers/thumbs/work-3.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_1.webp", "template": 1, "alt": "Beauty Papers - Image 1"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_2.webp", "template": 1, "alt": "Beauty Papers - Image 2"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_3.webp", "template": 1, "alt": "Beauty Papers - Image 3"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_4.webp", "template": 1, "alt": "Beauty Papers - Image 4"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_5.webp", "template": 1, "alt": "Beauty Papers - Image 5"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_6.webp", "template": 1, "alt": "Beauty Papers - Image 6"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_7.webp", "template": 1, "alt": "Beauty Papers - Image 7"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_8.webp", "template": 1, "alt": "Beauty Papers - Image 8"},
+    {"type": "image", "src": "/projects/beauty-papers/images/pic_9.webp", "template": 1, "alt": "Beauty Papers - Image 9"}
+  ]
+}

@@ -1,0 +1,138 @@
+/* ===== GLOBAL CSS ===== */
+
+/* Import only if you truly need Bodoni elsewhere */
+/* Remove if unused */
+/* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;500;600&display=swap'); */
+
+@import "tailwindcss";
+
+html, body, #__next {
+  height: 100%;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+  /* Editorial neutral stack */
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* ===== EDITORIAL SIDEBAR TYPOGRAPHY ===== */
+
+.sidebar {
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+  line-height: 0.9;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* Navigation labels */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.sidebar-nav button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  color: #6b7280;
+  font-weight: 400;
+  transition: color 0.15s ease;
+}
+
+.sidebar-nav button:hover {
+  color: #000;
+}
+
+.sidebar-nav .active {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Current project block */
+.sidebar-current {
+  margin-bottom: 48px;
+}
+
+.sidebar-label {
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.sidebar-title {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+}
+
+/* Sort controls */
+.sidebar-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* Archive list */
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.15s ease;
+}
+
+.sidebar-item:hover {
+  color: #000;
+}
+
+.sidebar-item.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.sidebar-date {
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.sidebar-type {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 0.9;
+}

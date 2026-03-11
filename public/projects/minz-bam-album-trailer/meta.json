@@ -1,0 +1,16 @@
+{
+  "title": "BY ANY MINZ",
+  "overview": "Minz Bam",
+  "section": "styling",
+  "date": "OCTOBER 2024",
+  "description": "BY ANY MINZ ALBUM TRAILER STYLED BY FABOYO JOHN ",
+  "tags": ["music", "sculpture", "abstract", "installation"],
+  "image": "/projects/minz-bam-album-trailer/videos/video.mp4",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/minz-bam-album-trailer/images/1_BAM.webp", "template": 1},
+    {"type": "image", "src": "/projects/minz-bam-album-trailer/images/2_BAM.webp", "template": 1},
+    {"type": "image", "src": "/projects/minz-bam-album-trailer/images/3_BAM.webp", "template": 1},
+    {"type": "video", "src": "/projects/minz-bam-album-trailer/videos/video.mp4", "template": 1}
+  ]
+}

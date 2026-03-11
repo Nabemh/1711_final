@@ -1,0 +1,24 @@
+{
+  "title": "Rema 2024",
+  "overview": "Rema",
+  "section": "styling",
+  "date": "DECEMBER 2024",
+  "description": "MARKET RESEARCH AND STYLING ASSISTANT FOR REMA'S HEIS TOUR STYLED BY MUI-HAI CHU ",
+  "tags": ["music", "motion", "textile", "contemporary"],
+  "image": "/projects/rema-2024/thumbs/overview-2.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/rema-2024/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_4.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_5.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_6.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_7.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_8.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_9.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_10.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_11.webp", "template": 1},
+    {"type": "image", "src": "/projects/rema-2024/images/pic_12.webp", "template": 1}
+  ]
+}

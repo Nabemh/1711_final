@@ -1,0 +1,16 @@
+{
+  "title": "CIRCUS MAXIMUS BY TRAVIS SCOTT",
+  "overview": "Circus Max",
+  "section": "styling",
+  "date": "JULY 2023",
+  "description": "Market research and styling assistant for the Circus Maximus film and album artwork by Travis Scott, as part of the Hardstyle team.  Photography by Gabriel Moses  Styling by A Hardstyle   July 2023.",
+  "tags": ["fashion", "runway", "theatrical", "experimental"],
+  "image": "/projects/circus-maximus/images/work-9.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/circus-maximus/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/circus-maximus/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/circus-maximus/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/circus-maximus/images/pic_4.webp", "template": 1}
+  ]
+}

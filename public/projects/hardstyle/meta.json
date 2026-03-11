@@ -1,0 +1,18 @@
+{
+  "title": "DIE HARD 2024",
+  "overview": "Hardstyle",
+  "section": "designs",
+  "date": "SEPTEMBER 2024",
+  "description": "IMAGE RESEARCH AND STYLING ASSISTANT FOR A COLLECTION BY HARDSTYLE PHOTOGRAPHY BY PIETER HUGO",
+  "tags": ["brutalism", "architecture", "texture", "industrial"],
+  "image": "/projects/hardstyle/thumbs/overview-3.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/hardstyle/images/pic_1.png", "template": 1},
+    {"type": "image", "src": "/projects/hardstyle/images/pic_2.png", "template": 1},
+    {"type": "image", "src": "/projects/hardstyle/images/pic_3.png", "template": 1},
+    {"type": "image", "src": "/projects/hardstyle/images/pic_4.png", "template": 1},
+    {"type": "image", "src": "/projects/hardstyle/images/pic_5.png", "template": 1},
+    {"type": "image", "src": "/projects/hardstyle/images/pic_6.png", "template": 1}
+  ]
+}

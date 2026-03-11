@@ -1,0 +1,14 @@
+{
+  "title": "Mr Eazi: Fefe Ne Fefe",
+  "overview": "Mr Eazi",
+  "section": "styling",
+  "date": "DECEMBER 2023",
+  "description": "FEFE NE FEFE MR EAZI MUSIC VIDEO STYLED BY FABOYO JOHN",
+  "tags": ["music", "photography", "editorial", "portrait"],
+  "image": "/projects/mr-eazi-fefe-ne-fefe/videos/video.mp4",
+  "video": true,
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/mr-eazi-fefe-ne-fefe/videos/video.mp4", "template": 1}
+  ]
+}

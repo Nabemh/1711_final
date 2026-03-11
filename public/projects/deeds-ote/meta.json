@@ -1,0 +1,23 @@
+{
+  "title": "DEEDS MAGAZINE",
+  "overview": "Deeds",
+  "section": "designs",
+  "date": "OCTOBER 2024",
+  "description": "Wardrobe curation for the Deeds Magazine, Cover star Odunsi the (Engine) 2024. Bigger Than Life ™ Photography by Babajide Akanni Styling by Faboyo John  October 2024.",
+  "tags": ["fashion", "photography", "monochrome", "portrait"],
+  "image": "/projects/deeds-ote/thumbs/work-6.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_4.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_5.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_6.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_7.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_8.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_9.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_10.webp", "template": 1},
+    {"type": "image", "src": "/projects/deeds-ote/images/pic_11.webp", "template": 1}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Exhibition: Dreams & Fantasies",
+  "overview": "Dreams & Fantasies",
+  "section": "exhibitions",
+  "date": "NOVEMBER 2023",
+  "description": "An experimental silhouette showcase pushing the boundaries of contemporary clothing design.",
+  "tags": ["exhibition", "experimental", "silhouette", "design"],
+  "image": "/projects/exhibition-dreams-fantasies/thumbs/work-6.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_4.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_5.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_6.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_7.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_8.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_9.webp", "template": 1},
+    {"type": "image", "src": "/projects/exhibition-dreams-fantasies/images/pic_10.webp", "template": 1}
+  ]
+}

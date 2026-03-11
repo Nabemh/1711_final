@@ -1,0 +1,23 @@
+{
+  "title": "COLLECTION 1 ELEVEN SIXTEEN 2024",
+  "overview": "1116",
+  "section": "styling",
+  "date": "APRIL 2024",
+  "description": "CREATIVE DIRECTION BY CHIEF UGO MOZIE  STYLED BY FABOYO JOHN AND ALIOUNE BADARA FALL.",
+  "tags": ["geometry", "abstract", "fashion", "contemporary"],
+  "image": "/projects/eleven-sixteen/thumbs/work-5.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_1.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_2.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_3.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_4.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_5.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_6.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_7.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_8.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_9.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_10.webp", "template": 1},
+    {"type": "image", "src": "/projects/eleven-sixteen/images/pic_11.webp", "template": 1}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "I.N Official",
+  "overview": "I.N.",
+  "section": "styling",
+  "date": "JULY 2024",
+  "description": "DESIGN AND ART DIRECTION FOR I.N OFFICIAL 2024/2025 COLLECTION BY IFEANYI INWUNE",
+  "tags": ["fashion", "lookbook", "summer", "contemporary"],
+  "image": "/projects/i-n-official/thumbs/overview.jpg",
+  "backgroundColor": "#ffffff",
+  "resources": [
+    {"type": "image", "src": "/projects/i-n-official/images/01_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/02_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/03_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/04_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/05_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/06_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/07_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/08_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/09_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/10_IN.webp", "template": 1},
+    {"type": "image", "src": "/projects/i-n-official/images/11_IN.webp", "template": 1}
+  ]
+}
