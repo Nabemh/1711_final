@@ -85,10 +85,10 @@ export default function ProjectDetailClient({ project: initialProject, section }
   const isDark = isDarkBg(bgColor)
 
     return (
-      <main className="min-h-screen flex" style={{ backgroundColor: bgColor }}>
+      <main className="min-h-screen flex flex-col md:flex-row overflow-x-hidden" style={{ backgroundColor: bgColor }}>
         
-        {/* LEFT — SIDEBAR (25% width) */}
-        <div className="w-1/4 fixed left-0 top-0 h-screen bg-white flex flex-col">
+        {/* LEFT — SIDEBAR (25% width, hidden on mobile) */}
+        <div className="hidden md:flex w-full md:w-1/4 md:fixed md:left-0 md:top-0 md:h-screen bg-white md:flex-col">
           <div className="flex-1 overflow-y-auto px-10 py-12 sidebar-type">
 
             {/* Close */}
@@ -126,9 +126,44 @@ export default function ProjectDetailClient({ project: initialProject, section }
           </div>
         </div>
 
-        {/* RIGHT — 75% SCROLLING PROJECT IMAGES */}
-        <div className="w-3/4 ml-[25%] pt-18 pb-22 overflow-y-auto">
-          <div className="space-y-8">
+        {/* MOBILE — SIDEBAR CONTENT AT TOP (shown only on mobile) */}
+        <div className="md:hidden w-full bg-white px-4 py-6 sm:px-6 sm:py-8">
+          {/* Close */}
+          <nav className="mb-6">
+            <button
+              onClick={() => router.back()}
+              className="block text-[10px] tracking-[0.14em] uppercase font-medium text-gray-500 hover:text-black transition-colors"
+            >
+              Close
+            </button>
+          </nav>
+
+          {/* Project Title + Date */}
+          <div className="mb-6 group cursor-default">
+            <h3 className="text-[10px] tracking-[0.05em] uppercase leading-tight text-black font-semibold">
+              {project.title}
+            </h3>
+            <h3 className="text-[10px] tracking-[0.05em] uppercase leading-tight font-semibold text-black">
+              {project.date || "July 2023"}
+            </h3>
+          </div>
+
+          {/* Description */}
+          {project.description && (
+            <div className="text-[11px] leading-relaxed text-black space-y-3 uppercase">
+              {project.description.split(". ").map((sentence, i) => (
+                <p key={i}>
+                  {sentence}
+                  {i < project.description.split(". ").length - 1 && "."}
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* RIGHT — SCROLLING PROJECT IMAGES */}
+        <div className="w-full md:w-3/4 md:ml-[25%] pt-3 pb-4 md:pt-18 md:pb-22 overflow-y-auto">
+          <div className="space-y-2 sm:space-y-3 md:space-y-8">
 
             {project.resources?.map((res, index) => (
               <div
@@ -166,8 +201,8 @@ export default function ProjectDetailClient({ project: initialProject, section }
 
   // Fallback for projects without resources
   return (
-    <main className="min-h-screen flex" style={{ backgroundColor: project.backgroundColor || "#ffffff" }}>
-      <div className="w-1/4 fixed left-0 top-0 h-screen bg-white flex flex-col">
+    <main className="min-h-screen flex flex-col md:flex-row overflow-x-hidden" style={{ backgroundColor: project.backgroundColor || "#ffffff" }}>
+      <div className="hidden md:flex w-full md:w-1/4 md:fixed md:left-0 md:top-0 md:h-screen bg-white md:flex-col">
         <div className="flex-1 overflow-y-auto px-10 py-12">
           <nav className="mb-6">
             <Link
@@ -187,7 +222,28 @@ export default function ProjectDetailClient({ project: initialProject, section }
           </div>
         </div>
       </div>
-      <div className="w-3/4 ml-[25%] pt-24 pb-24 flex items-center justify-center">
+
+      {/* MOBILE — SIDEBAR CONTENT AT TOP */}
+      <div className="md:hidden w-full bg-white px-4 py-6 sm:px-6 sm:py-8">
+        <nav className="mb-6">
+          <Link
+            href="/projects"
+            className="block text-[10px] tracking-[0.14em] uppercase font-medium text-gray-500 hover:text-black transition-colors"
+          >
+            Close
+          </Link>
+        </nav>
+        <div className="mb-6">
+          <h3 className="text-[10px] tracking-[0.05em] uppercase leading-tight text-black font-semibold">
+            {project.title}
+          </h3>
+          <h3 className="text-[10px] tracking-[0.05em] uppercase leading-tight font-semibold text-black">
+            {project.date || "July 2023"}
+          </h3>
+        </div>
+      </div>
+
+      <div className="w-full md:w-3/4 md:ml-[25%] pt-24 pb-24 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500">No resources available for this project</p>
         </div>
