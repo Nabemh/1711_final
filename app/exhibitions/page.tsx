@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import Image from "next/image"
 import type { Project } from "@/lib/projects"
 import { isVideoFile } from "@/lib/cloudflare"
@@ -9,14 +9,16 @@ import Sidebar from "@/components/Sidebar"
 
 type SortBy = "name" | "date"
 
-export default function ProjectsPage() {
+export default function ExhibitionsPage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
+  const [currentProject, setCurrentProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
   const [sortBy, setSortBy] = useState<SortBy>("date")
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     async function fetchProjects() {
@@ -33,6 +35,7 @@ export default function ProjectsPage() {
 
         if (exhibitions.length > 0) {
           setHoveredProject(exhibitions[0])
+          setCurrentProject(exhibitions[0])
         }
       } catch (err) {
         console.error("Failed to load projects:", err)
@@ -65,76 +68,235 @@ export default function ProjectsPage() {
   }
 
   const sortedProjects = getSortedProjects()
-  const currentProject = hoveredProject || sortedProjects[0]
+  const displayProject = hoveredProject || currentProject || sortedProjects[0]
 
   return (
-    <main className="h-screen bg-white text-black overflow-hidden">
+    <main className="bg-white text-black">
 
-      {/* Header */}
-      <header className="fixed top-0 left-0 w-full h-[80px] flex items-center px-10 bg-white z-50">
-        <Image
-          src="/logo-f2-copy.jpeg"
-          alt="Logo"
-          width={120}
-          height={40}
-          priority
-        />
-      </header>
-
-      {/* SIDEBAR */}
-      <Sidebar
-        projects={sortedProjects}
-        hoveredProject={hoveredProject}
-        setHoveredProject={setHoveredProject}
-        sortBy={sortBy}
-        setSortBy={setSortBy}
-        currentPage="exhibitions"
-        onCollapseChange={(collapsed) => setIsSidebarOpen(!collapsed)}
-      />
-
-      {/* RIGHT VIEWER */}
-      <div className={`transition-all duration-300 h-[calc(100vh-80px)] relative mt-[80px] ${
-        isSidebarOpen ? "ml-[25%] w-[75%]" : "ml-[60px] w-[calc(100%-60px)]"
-      }`}>
-
-        {/* Project Title and Date - Top Right */}
-        {currentProject && (
-          <div className="absolute top-0 right-0 z-10 p-6 text-right">
-            <h2 className="text-sm font-semibold mb-1">
-              {currentProject.title}
-            </h2>
-            <p className="text-xs text-gray-600">
-              {currentProject.date}
-            </p>
-          </div>
-        )}
-
-        <div className="w-full h-full flex items-center justify-center">
-
-        {isVideoFile(currentProject.image) || currentProject.video ? (
-            <video
-            src={currentProject.image}
-            className="max-w-[85%] max-h-[85%] object-contain"
-            autoPlay
-            muted
-            loop
-            playsInline
-            />
-        ) : (
+      {/* DESKTOP VIEW */}
+      <div className="hidden md:flex md:h-screen md:overflow-hidden">
+        {/* Header */}
+        <header className="fixed top-0 left-0 w-full h-[80px] flex items-center px-10 bg-white z-50">
           <Image
-            src={currentProject.image}
-            alt={currentProject.title}
-            width={1600}
-            height={1000}
-            className="w-full h-full object-contain"
+            src="/logo-f2-copy.jpeg"
+            alt="Logo"
+            width={120}
+            height={40}
             priority
-            unoptimized={true}
           />
+        </header>
+
+        {/* SIDEBAR */}
+        <Sidebar
+          projects={sortedProjects}
+          hoveredProject={hoveredProject}
+          setHoveredProject={setHoveredProject}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          currentPage="exhibitions"
+          onCollapseChange={(collapsed) => setIsSidebarOpen(!collapsed)}
+        />
+
+        {/* RIGHT VIEWER */}
+        <div className={`transition-all duration-300 h-[calc(100vh-80px)] relative mt-[80px] ${
+          isSidebarOpen ? "ml-[25%] w-[75%]" : "ml-[60px] w-[calc(100%-60px)]"
+        }`}>
+
+          {/* Project Title and Date - Top Right */}
+          {displayProject && (
+            <div className="absolute top-0 right-0 z-10 p-6 text-right">
+              <h2 className="text-sm font-semibold mb-1">
+                {displayProject.title}
+              </h2>
+              <p className="text-xs text-gray-600">
+                {displayProject.date}
+              </p>
+            </div>
+          )}
+
+          <div className="w-full h-full flex items-center justify-center">
+
+            {displayProject && (isVideoFile(displayProject.image) || displayProject.video) ? (
+              <video
+                src={displayProject.image}
+                className="max-w-[85%] max-h-[85%] object-contain"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : displayProject ? (
+              <Image
+                src={displayProject.image}
+                alt={displayProject.title}
+                width={1600}
+                height={1000}
+                className="w-full h-full object-contain"
+                priority
+                unoptimized={true}
+              />
+            ) : null}
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* MOBILE VIEW */}
+      <div className="md:hidden min-h-screen">
+
+        {/* HEADER */}
+        <header className="flex items-center py-6 px-6">
+          <Image
+            src="/logo-f2-copy.jpeg"
+            alt="Logo"
+            width={110}
+            height={40}
+            priority
+          />
+        </header>
+
+        {/* SECTION NAVIGATION */}
+        <nav className="px-6 mb-1 pb-6">
+          <div className="space-y-2">
+            <button
+              onClick={() => router.push("/exhibitions")}
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/exhibitions" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
+            >
+              1711 Exhibitions
+            </button>
+            <button
+              onClick={() => router.push("/designs")}
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/designs" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
+            >
+              1711 Designs
+            </button>
+            <button
+              onClick={() => router.push("/styling")}
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/styling" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
+            >
+              1711 Styling
+            </button>
+            <button
+              onClick={() => router.push("/overview")}
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/overview" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
+            >
+              Overview
+            </button>
+          </div>
+        </nav>
+
+        {/* FEATURED PROJECT */}
+        {currentProject && (
+          <section className="px-6 pt-3">
+
+            <div className="w-full aspect-[3/2] relative">
+
+              {isVideoFile(currentProject.image) || currentProject.video ? (
+
+                <video
+                  src={currentProject.image}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+
+              ) : (
+
+                <Image
+                  src={currentProject.image}
+                  alt={currentProject.title}
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+
+              )}
+
+            </div>
+
+            <div className="text-center mt-4">
+
+              <h2 className="text-sm font-semibold uppercase">
+                {currentProject.title}
+              </h2>
+
+              <p className="text-xs text-gray-600 uppercase">
+                {currentProject.date}
+              </p>
+
+            </div>
+
+          </section>
         )}
+
+        {/* SORT CONTROLS */}
+        <div className="px-6 mt-10 grid grid-cols-2 text-[11px] tracking-[0.14em] uppercase">
+
+          <button
+            onClick={() => setSortBy("name")}
+            className={sortBy === "name" ? "font-bold text-left" : "text-left"}
+          >
+            SORT BY NAME
+          </button>
+
+          <button
+            onClick={() => setSortBy("date")}
+            className={sortBy === "date" ? "font-bold text-right" : "text-right"}
+          >
+            SORT BY DATE
+          </button>
+
+        </div>
+
+        {/* PROJECT LIST */}
+        <div className="px-6 mt-6 pb-20 space-y-2">
+
+          {sortedProjects.map((project) => (
+
+            <div
+              key={project.slug}
+              className="flex justify-between items-start cursor-pointer"
+              onClick={() => {
+                setCurrentProject(project)
+                router.push(`/projects/${project.slug}`)
+              }}
+            >
+
+              <span className="text-[11px] uppercase tracking-[0.06em] font-medium">
+                {project.overview}
+              </span>
+
+              <span className="text-[11px] uppercase tracking-[0.08em] font-medium">
+                {project.date}
+              </span>
+
+            </div>
+
+          ))}
 
         </div>
 
       </div>
+
     </main>
   )
 }

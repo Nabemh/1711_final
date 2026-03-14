@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import Image from "next/image"
 import type { Project } from "@/lib/projects"
 import { isVideoFile } from "@/lib/cloudflare"
@@ -18,6 +18,7 @@ export default function DesignsPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     async function fetchProjects() {
@@ -160,25 +161,41 @@ export default function DesignsPage() {
           <div className="space-y-2">
             <button
               onClick={() => router.push("/exhibitions")}
-              className="block text-[10px] tracking-[0.14em] uppercase font-medium text-black hover:font-semibold transition-colors"
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/exhibitions" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
             >
               1711 Exhibitions
             </button>
             <button
               onClick={() => router.push("/designs")}
-              className="block text-[10px] tracking-[0.14em] uppercase font-semibold text-black"
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/designs" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
             >
               1711 Designs
             </button>
             <button
               onClick={() => router.push("/styling")}
-              className="block text-[10px] tracking-[0.14em] uppercase font-medium text-black hover:font-semibold transition-colors"
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/styling" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
             >
               1711 Styling
             </button>
             <button
               onClick={() => router.push("/overview")}
-              className="block text-[10px] tracking-[0.14em] uppercase font-medium text-black hover:font-semibold transition-colors"
+              className={`block text-[10px] tracking-[0.14em] uppercase transition-colors ${
+                pathname === "/overview" 
+                  ? "font-bold text-black" 
+                  : "font-normal text-black hover:font-semibold"
+              }`}
             >
               Overview
             </button>

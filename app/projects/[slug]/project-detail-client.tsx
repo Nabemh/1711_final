@@ -127,9 +127,9 @@ export default function ProjectDetailClient({ project: initialProject, section }
         </div>
 
         {/* MOBILE — SIDEBAR CONTENT AT TOP (shown only on mobile) */}
-        <div className="md:hidden w-full bg-white px-4 py-6 sm:px-6 sm:py-8">
+        <div className="md:hidden w-full bg-white px-3 py-2 sm:px-4 sm:py-3">
           {/* Close */}
-          <nav className="mb-6">
+          <nav className="mb-3 sm:mb-3">
             <button
               onClick={() => router.back()}
               className="block text-[10px] tracking-[0.14em] uppercase font-medium text-gray-500 hover:text-black transition-colors"
@@ -139,7 +139,7 @@ export default function ProjectDetailClient({ project: initialProject, section }
           </nav>
 
           {/* Project Title + Date */}
-          <div className="mb-6 group cursor-default">
+          <div className="mb-3 sm:mb-4 group cursor-default">
             <h3 className="text-[10px] tracking-[0.05em] uppercase leading-tight text-black font-semibold">
               {project.title}
             </h3>
@@ -168,7 +168,7 @@ export default function ProjectDetailClient({ project: initialProject, section }
             {project.resources?.map((res, index) => (
               <div
                 key={index}
-                className="w-full h-[140vh] relative flex items-center justify-center"
+                className="w-full min-h-[53vh] relative flex items-center justify-center"
               >
                 {res.type === "video" ? (
                   <video
